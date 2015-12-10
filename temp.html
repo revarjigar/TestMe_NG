@@ -1,0 +1,19 @@
+<div class="row">
+    <form name="checkboxForm" ng-submit="submit()" no-validate>
+        <div class="form-group">
+            <label class="checkbox">
+                <input id="allSelected" type="checkbox" ng-model="allSelected" ng-change="selectAll()"/>Select All
+            </label>
+        </div>
+        <div class="form-group row well ">
+
+            <label ng-repeat="field in fields" class="checkbox">
+                <input type="checkbox" name="fields" ng-model="field.checked"/>{{field.value}}
+            </label>
+            <label ng-show="formError == true"/>
+            Please select one more
+            </label>
+        </div>
+        <button type="submit" class="btn btn-default col-md-4">Submit</button>
+    </form>
+</div>
